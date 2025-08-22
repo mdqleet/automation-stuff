@@ -42,7 +42,7 @@ test('Login_Fail_Password', async ({ page }) => {
     // Click 'submit'
     await page.click ('text=Submit')
     // Verifica mesajul de fail (daca apare)
-    await expect(page.locator('#error')).not.toBeVisible();
+    await expect(page.locator('#error')).toBeVisible();
     // Verifica mesajul de fail (daca e corect)
     await expect(page.locator('#error')).toHaveText('Your password is invalid!');
 })
