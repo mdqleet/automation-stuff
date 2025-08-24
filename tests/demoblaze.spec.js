@@ -84,5 +84,5 @@ test('Products', async ({ page }) => {
   await page.fill('#month', 'March')
   await page.fill('#year', '2027')
   await page.getByRole('button', { name: 'Purchase'}).click();
-  await expect(page.getByText('Thank you for your purcha!')).toBeVisible();
+  await expect(page.getByText('Thank you for your purchase!')).toBeVisible();
 });
